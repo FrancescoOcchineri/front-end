@@ -142,4 +142,3 @@ function giveMeRandom(x){
 
 let random= giveMeRandom(10);
 console.log(random)
-/* SCRIVI QUI LA TUA RISPOSTA */
