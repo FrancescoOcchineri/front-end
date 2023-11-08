@@ -4,9 +4,10 @@
 */
 
 function concatString (string1, string2) {
-  let sliceString = string1.slice(0, 2) + string2.slice(-3)
-  sliceString.toUpperCase()
-  return(sliceString)
+  let s1 = string1.slice(0, 2);
+  let s2 = string2.slice(-3)
+  let conc = s1.concat(s2)
+  return conc.toUpperCase()
 }
 
 console.log(concatString("Ciao ", " a tutti"))
@@ -31,32 +32,32 @@ console.log(arrayRandom(10))
 */
 
 function filterArray(fArray) {
-  let pari = fArray.filter(function (numero) {
-    return numero % 2 === 0
-  })
-  return(pari)
+return fArray.filter(ele => ele %2 === 0)
 }
 
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let pari = filterArray(array)
-console.log(filterArray(pari))
+console.log(filterArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+let arraySum = [10, 20, 30];
 
-let sumArray = [1, 4, 8, 10];
+let sumArray = function (arr) {
+  let somma= 0;
+  arr.forEach(ele => somma += ele)
+  return somma;
+}
 
-sumArray.forEach((i, t) => console.log(i += t)) 
-
+console.log(sumArray(arraySum))
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
 let sumNum = [1, 6, 2, 3];
 
-let sum = sumNum.reduce((i, n) => i + n, 0)
-console.log(sum)
+let reduceArray = (arr)  => {return arr.reduce((i, t) => i += t, 0)}
+
+console.log(reduceArray(sumNum))
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -80,11 +81,13 @@ console.log(newMapArray)
 */
 
 function numDispari() {
-  var nDispari = [];
+  let nDispari = [];
 
-  for (var i = 1; i <= 99; i += 2) {
-    nDispari.push(i);
-  }
+  for (var i = 0; i <= 100; i ++) {
+    if(i % 2 !== 0) {
+      nDispari.push(i)
+}
+}
 
   return nDispari;
 }
@@ -211,39 +214,68 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-let now = 2023;
-let oldMovie = null
-let oldMovies = movies.forEach((val) => {if (val.Year < now) { (oldMovie = val.title)}});
-console.log(oldMovie + now)
+
+let filmVecchio = function(arr) {
+  let old = arr[0];
+  arr.forEach(film => {
+    console.log(film.Year)
+    if(film.Year < old.Year)
+    old = film;
+  })
+}
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
-/*function numFilm() {
-  for (i=0; i<numFilm.length; i++) {
-  let numeroFilm = numFilm[i]
-  return(numeroFilm)
-  }
-}
 
-console.log(numFilm())*/
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+
+function filmTtitle(arr) {
+  return arr.map(film => film.Title)
+}
+
+console.log (filmTtitle(movies))
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+function filmFilter (arr) {
+  return arr.filter(film => film.Year >= 2000)
+}
+
+console.log(filmFilter(movies))
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
+let arrReduce = (arr) => {
+  return arr.reduce((i, film) => i + Number(film.Year), 0)
+}
+
+console.log(arrReduce(movies))
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+let findArr = function (arr, id)  {
+  return arr.find(film => film.imbID === id)
+}
+
+console.log(findArr(movies), 'tt0120737')
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+let arrIndex = function (arr, year) {
+  return arr.findIndex(film => film.Year === year)
+}
+
+console.log(arrIndex(movies, 2012))
