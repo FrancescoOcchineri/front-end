@@ -1,0 +1,26 @@
+html {
+    background-image: url(../img/Webb_s_first_deep_field.jpg);
+   background-size: cover
+}
+
+ul {
+    color: white;
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(176,11,214);
+    font-family: 'Kanit', sans-serif;
+    margin-top: 40px;
+    font-size: 50px;
+}
+
+.container1 {
+    text-align: center;
+    background-image: url(../img/atmosfera-pianeta.jpg);
+}
+
+.container2 {
+    text-align: center;
+}
