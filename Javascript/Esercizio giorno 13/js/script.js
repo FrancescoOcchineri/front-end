@@ -4,19 +4,26 @@ let input = document.querySelector('input')
 
 btn1.addEventListener('click', () => {
 let newList = document.createElement("li");
-newList.textContent = input.value
+newList.textContent = input.value.trim()
 ul.appendChild(newList)
 let deleteTask = document.createElement("button")
 deleteTask.innerHTML = "Delete";
 newList.appendChild(deleteTask)
 deleteTask.addEventListener('click', () =>{
     newList.style.display = "none"
-})
+    })
 })
 
 ul.addEventListener('click', () => {
-    ul.style.textDecoration = "line-through"
+        if (ul.style.textDecoration === "line-through") {
+            ul.style.textDecoration = "none";
+        } else {
+            ul.style.textDecoration = "line-through";
+        }
 })
+
+
+
 
 
 

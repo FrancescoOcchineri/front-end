@@ -1,6 +1,7 @@
 html {
     background-image: url(../img/Webb_s_first_deep_field.jpg);
-   background-size: cover
+   background-size: cover;
+   display: block;
 }
 
 ul {
@@ -18,9 +19,61 @@ h1 {
 
 .container1 {
     text-align: center;
-    background-image: url(../img/atmosfera-pianeta.jpg);
+    background-image: url(../img/1_RwdyeQeso7W_PXimfYnOOA.jpeg);
+    padding: 100px 200px;
+    background-size: cover;
+    margin: 0 440px;
+    border-radius: 30%;
+    box-shadow: 2px 2px 15px white;
+    display: block;
+}
+
+#input {
+background-color: rgb(176,11,214);
+font-weight: bold;
+box-shadow: 2px 2px 15px grey;
+color: white;
+padding: 10px ;
+font-size: 20px;
+margin-left: -20px;
+text-align: center;
+}
+
+#btn1 {
+    background-image: url(../img/Webb_s_first_deep_field.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 15px grey;
+    color: white;
+    padding: 10px 30px;
+    margin: 20px 20px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .container2 {
     text-align: center;
+}
+
+ul {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+
+li {
+    font-size: 30px;
+    margin-top: 50px;
+    font-weight: bold;
+    color: white;
+    margin: 0 200px;
+}
+
+button {
+    margin: 0 200px;
+    padding: 5px 5px;
+    background-color: rgb(176,11,214);
+    color: white;
+    font-weight: bold;
 }
