@@ -1,0 +1,85 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.task1, .task2, .task3, .task4, .task5, .task6, .task7, .task8 {
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.451);
+    z-index: 1;
+}
+
+.task1, .task5, .task7 {
+    background: linear-gradient(180deg, rgba(245,245,195,1) 73%, rgba(232,227,227,0.021241773076418058) 100%);
+}
+
+.task2, .task4, .task8 {
+    background: linear-gradient(180deg, rgba(198,244,200,1) 73%, rgba(232,227,227,0.021241773076418058) 100%);
+}
+
+.task3, .task6 {
+    background: linear-gradient(180deg, rgba(193,195,233,1) 73%, rgba(232,227,227,0.021241773076418058) 100%);
+}
+
+h3 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 30px;
+}
+
+h3, p {
+    margin: 10px;
+}
+
+
+/* Animation */
+
+.task1, .task5, .task3, .task7 {
+    transform: rotatez(-4deg);
+}
+
+.task2, .task8 {
+    transform: rotatez(4deg);
+}
+
+.task4 {
+    transform: rotatez(9deg);
+}
+
+.task6 {
+    transform: rotatez(-8deg)
+}
+
+.task1, .task2, .task3, .task4, .task5, .task6, .task7, .task8 {
+    z-index: 1;
+    transition: transform 0.5s;
+}
+
+.task1:hover, .task2:hover, .task3:hover, .task4:hover, .task5:hover, .task6:hover, .task7:hover, .task8:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
