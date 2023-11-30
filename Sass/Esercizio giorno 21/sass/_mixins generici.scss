@@ -1,0 +1,32 @@
+@mixin floating () {
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(100, 95, 95, 0.8);
+    border: 1px solid rgb(138, 135, 135);
+    width: 50%;
+}
+
+@mixin floating2 () {
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(100, 95, 95, 0.8);
+    width: 350px;
+}
+
+@mixin grid () {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+header img {
+    @include floating();
+    }
+
+main img {
+    @include floating2();
+}
+
+.line-4 {
+    @include grid();
+}
+

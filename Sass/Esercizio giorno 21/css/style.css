@@ -64,15 +64,6 @@ body .showcase-content h1 {
 body .btn {
   color: white;
 }
-body .btn.btn-primary {
-  background-color: #0e6cff !important;
-}
-body .btn.btn-secondary {
-  background-color: #ff8700 !important;
-}
-body .btn.btn-tertiary {
-  background-color: #4caf50 !important;
-}
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -112,11 +103,77 @@ nav li {
 .showcase-content {
   padding-top: 200px;
   padding-inline: 5% 5%;
+  display: flex;
 }
 .showcase-content p {
   padding-top: 15px;
   padding-inline: 0;
 }
-.showcase-content button {
+.showcase-content .btn {
   margin-top: 30px;
+  padding: 15px 20px;
+}
+
+main img {
+  margin: 80px 15px;
+}
+
+header img {
+  margin-bottom: -50px;
+}
+
+.btn:nth-of-type(1) {
+  background-color: #0e6cff !important;
+}
+.btn:nth-of-type(2) {
+  background-color: #ff8700 !important;
+}
+.btn:nth-of-type(3) {
+  background-color: #4caf50 !important;
+}
+
+header img {
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(100, 95, 95, 0.8);
+  border: 1px solid rgb(138, 135, 135);
+  width: 50%;
+}
+
+main img {
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(100, 95, 95, 0.8);
+  width: 350px;
+}
+
+.line-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation1 {
+  opacity: 0;
+  animation: opacity 1.5s ease-in-out forwards;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.img {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  animation: fallIn 1.5s ease-in-out forwards;
+}
+@keyframes fallIn {
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+@mixin opacity () {
+    opacity: 0;
+    animation: opacity 1.5s ease-in-out forwards; 
+  
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin falling () {
+    position: relative;
+    top: -100px; 
+    opacity: 0; 
+    animation: fallIn 1.5s ease-in-out forwards; 
+  
+  @keyframes fallIn {
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.animation1 {
+    @include opacity();
+}
+
+.img {
+    @include falling();
+}

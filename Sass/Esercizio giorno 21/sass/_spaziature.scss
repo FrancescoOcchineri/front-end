@@ -8,7 +8,21 @@
     flex-direction: $row;
 }
 
+@mixin floatingg() {
+    display: flex;
+}
+
+@mixin testo () {
+    display: flex;
+    flex: 0 0 33%;
+}
+
 $top: 30px;
+$flex: flex;
+$align: center;
+$margin: 80px 15px;
+$marginBottom: -50px;
+$padding: 15px 20px;
 
 nav {
     @include padding(40px, 5% 5%);
@@ -23,12 +37,24 @@ nav {
     }
 }
 
+
 .showcase-content {
     @include padding(200px, 5% 5%);
     p {
         @include padding(15px, 0);
     }
-    button {
+    .btn {
        margin-top: $top;
+       padding: $padding;
     }
+    @include floatingg();
 }
+
+main img {
+   margin: $margin;
+}
+
+header img {
+    margin-bottom: $marginBottom;
+}
+
