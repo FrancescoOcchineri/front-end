@@ -1,0 +1,33 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+$button-size: 10px;
+
+@mixin big_title() {
+    font-weight: bold;
+    font-size: 80px;
+}
+
+@mixin small_title () {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+header {
+    .showcase-content h1 {
+        @include big_title();
+    }
+    .logo {
+        @include small_title ();
+    }
+    button {
+        font-size: $button-size;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+
+
