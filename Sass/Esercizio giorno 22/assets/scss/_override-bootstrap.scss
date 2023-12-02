@@ -1,0 +1,17 @@
+@import "../../bootstrap-5.3.2/scss/functions";
+@import "../../bootstrap-5.3.2/scss/variables";
+
+$purple: purple;
+$green: rgb(126, 195, 126);
+$hero: #7253fa;
+$chiaroRed: #F9EEDB;
+$custom-colors: (
+    'purple': $purple,
+    'green': $green,
+    'hero': $hero,
+    'chiaroRed': $chiaroRed
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../../bootstrap-5.3.2/scss/bootstrap.scss";

@@ -1,0 +1,25 @@
+nav {
+    .badg {
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        margin: 2px -5px;
+    }
+    .badg2 {
+        @extend .badg;
+        bottom: 0;
+        margin: -5px -5px;
+    }
+    .imgg {
+        width: 30px;
+        height: 30px;
+    }
+    .bell {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,19 @@
+@mixin imgCardFooter() {
+    width: 30px;
+    height: 30px;
+}
+
+article {
+    .img-footer{
+        @include imgCardFooter();
+    }
+    .container {
+        padding-top: 100px;
+    }
+    h4 {
+        margin-bottom: 30px;
+    }
+    .crossMenu {
+        margin: 0 -60px;
+    }
+}
