@@ -1,3 +1,12 @@
-card img {
-    height: 50rem;
+.btn.bg-white:hover {
+    background-color: rgb(241, 177, 177) !important;
+}
+
+.container .card {
+    transition: transform 0.5s;
+}
+
+.container .card:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+    z-index: 1000;
 }
